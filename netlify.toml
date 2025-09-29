@@ -1,0 +1,18 @@
+# Netlify configuration file
+# Docs: https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  publish = "."
+  # If you have a build command, uncomment and set it below:
+  # command = "npm run build"
+
+# Uncomment below to set up redirects (example: redirect all requests to index.html for SPA)
+# [[redirects]]
+#   from = "/api/*"
+#   to = "/.netlify/functions/:splat"
+#   status = 200
+
+# [[redirects]]
+#   from = "/*"
+#   to = "/index.html"
+#   status = 200
