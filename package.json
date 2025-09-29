@@ -10,6 +10,7 @@
   "scripts": {
     "dev": "node server.js",
     "start": "node server.js",
+    "postinstall": "npm install",
     "seed": "node utils/seed.js"
   },
   "dependencies": {

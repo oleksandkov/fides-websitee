@@ -1,0 +1,47 @@
+# Exported from Render on 2025-09-29T19:17:05Z
+version: "1"
+projects:
+- name: fides
+  environments:
+  - name: Production
+    services:
+    - type: web
+      name: fides-website
+      runtime: node
+      repo: https://github.com/oleksandkov/fides-websitee
+      plan: free
+      envVars:
+      - key: MONGO_URI
+        sync: false
+      - key: .env
+        sync: false
+      - key: CONTACT_FORM_RECIPIENTS
+        sync: false
+      - key: R2_PUBLIC_BASE_URL
+        sync: false
+      - key: R2_BUCKET_NAME
+        sync: false
+      - key: R2_SECRET_ACCESS_KEY
+        sync: false
+      - key: R2_ACCESS_KEY_ID
+        sync: false
+      - key: R2_ACCOUNT_ID
+        sync: false
+      - key: SMTP_TLS_REJECT_UNAUTHORIZED
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_SECURE
+        sync: false
+      - key: SMTP_PORT
+        sync: false
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_POOL
+        sync: false
+      region: frankfurt
+      buildCommand: npm install
+      startCommand: node server.js
+      autoDeployTrigger: commit
