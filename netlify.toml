@@ -5,6 +5,7 @@
   publish = "."
   # If you have a build command, uncomment and set it below:
   # command = "npm run build"
+  # command = "npm run start"
 
 # Uncomment below to set up redirects (example: redirect all requests to index.html for SPA)
 # [[redirects]]
